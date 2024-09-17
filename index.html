@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+   
+    <title>منصة الرحمة</title>
+    <style id="s">
+      body{
+        background-color: black;
+        align-items: center;
+      }
+      .cl{
+        color: white;
+        top:60% ;
+        text-align: center;
+        width: 99%;
+        height: 20%;
+        position: absolute;
+        font-size: 5vh;
+        animation: aa 1s alternate infinite;
+      }
+      @keyframes aa {
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
+      }
+    </style>
+</head>
+<body id="b">
+    <audio class="aud" src="r.mp3"></audio>
+    <div class="d"></div>
+    <h1 class="soon">قريبا</h1>
+    <div class="kalam">هذه المنصة تابعة لجروب الرحمة الرسمى<br>و ليس لها أى علاقة بأي شكل من الأشكل بمنصور !!!!!!</div>
+<div class="cl" id="cl">اضغط للمتابعة</div>
+    <script>
+        document.getElementById('cl').addEventListener("click",()=>{
+            document.getElementsByClassName('aud')[0].play()
+            document.getElementById('s').innerHTML = `  body *:not(.aud){
+            opacity: 0;
+        }
+        .soon{
+            animation: app 2s 7s forwards;
+            margin: 0px;
+            border: 0px;
+            text-align: center;
+            position: relative;
+            color: white;
+            font-size: 5vw;
+            height: 10vh;
+        }
+        body{
+            background-color: black;
+        }
+        .d{
+            animation: app 4s 2s forwards;
+            background-size: 100% 100%;
+
+            background-image: url("r.jpeg");
+            position: relative;
+            top: 0vh;
+            left: 0vw;
+            width: 100%;
+            height: 70vh;
+            background-repeat:no-repeat; 
+        }
+        .kalam{
+            animation: app 2s 10s forwards;
+            position: relative;
+            height: 20%;
+            color: white;
+            font-size: 5vw;
+        }
+        @keyframes app {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+       `
+        })
+        //document.getElementsByClassName('aud')[0].play()
+    </script>
+</body>
+</html>
